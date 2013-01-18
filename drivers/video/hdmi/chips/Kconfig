@@ -1,0 +1,5 @@
+choice
+	prompt "HDMI chips select"
+config CAT6611
+	bool "cat6611"
+endchoice

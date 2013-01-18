@@ -1,0 +1,18 @@
+choice
+	prompt "HDMI chips select"
+config ANX7150
+	bool "anx7150"
+config ANX9030
+	bool "anx9030"
+config CAT6611
+	bool "cat6611"
+config HDMI_IT6610
+	bool "HDMI IT6610"
+config HDMI_HOTPLUG_MODE
+	depends on HDMI_IT6610
+	bool "HDMI hotplug mode"
+	default n
+config HDMI_HOTPLUG_HPD_CONNECT_LOW_ACTIVE
+	depends on HDMI_HOTPLUG_MODE
+	bool "HDMI connection is low active"
+endchoice
